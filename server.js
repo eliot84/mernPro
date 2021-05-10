@@ -14,6 +14,8 @@ const app = express();
 //single endpoint for testing sends message to browser window
 app.get('/', (req, res) => res.send('API Running'));
 
+//Init middleware --> replaces the old body parser
+app.use(express.json({extended: false}));
 
 //Define Routes
 app.use('/api/users', require('./routes/api/users'));
