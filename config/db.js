@@ -6,7 +6,7 @@ const config = require('config');
 const db = config.get('MONGO_URI');
 
 //connect to mongoDB using async await promise arrow function
-mongoose.connect(db)
+
 const connectDB = async () => {
     try { //if try works 
         await mongoose.connect(db, {
